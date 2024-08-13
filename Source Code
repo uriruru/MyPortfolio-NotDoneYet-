@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: white;">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reuj | Front-End Developer</title>
+</head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<a target="_blank" href="https://icons8.com/icon/34301/unreal-engine"></a>
+
+
+
+<body>
+
+
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img src="/images/Reu James Profile Image.jpg" alt="Logo"
+          style="border-radius: 50%; padding: 0 15px; height: 25px;">
+        <p style="line-height: 17px; font-weight: bolder; color: #3160c5; font-family: monospace;">ReuJames <br> <span
+            style="font-family: sans-serif; font-size: 13px; color: gray;">Frontend Developer</span></p>
+      </a>
+      <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div id="navbarExampleTransparentExample" class="navbar-menu" style="font-size: 13px;">
+      <div class="navbar-end">
+        <!-- Navigation items here -->
+
+        <a class="navbar-item" href="">
+          <span>Home</span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <hr>
+          <a style="font-weight: bolder;" class="navbar-link is-arrow" onclick="toggleProjects(event)">
+            Projects
+          </a>
+          <div id="projectsDropdown" class="navbar-dropdown is-boxed" style="display: none;">
+            <a class="navbar-item" href="">
+              Frontend Development
+            </a>
+            <a class="navbar-item" href="">
+              Backend Development
+            </a>
+            <a class="navbar-item" href="">
+              Web Design (Ui Design)
+            </a>
+            <a class="navbar-item" href="">
+              Video Projects
+            </a>
+            <a class="navbar-item" href="">
+              Fullstack Development
+            </a>
+            <a class="navbar-item" href="">
+              Drone Videography
+            </a>
+          </div>
+        </div>
+        <hr>
+
+        <a class="navbar-item" href="">
+          <span>Certificates</span>
+        </a>
+        <hr>
+
+        <a class="navbar-item" href="">
+          <span>Resume</span>
+        </a>
+        <hr>
+
+        <a class="navbar-item" href="">
+          <span>Blog</span>
+        </a>
+        <hr>
+
+        <a class="navbar-item" href="">
+          <span>Services</span>
+        </a>
+        <hr>
+
+        <a class="navbar-item" href="">
+          <span>Experience</span>
+        </a>
+        <hr>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="field is-grouped">
+            <style>
+              @keyframes gradientAnimation {
+                0% {
+                  background-position: 0% 50%;
+                }
+
+                50% {
+                  background-position: 100% 40%;
+                }
+
+                100% {
+                  background-position: 0% 50%;
+                }
+              }
+
+              .custom-button {
+                background: linear-gradient(-30deg, #313131 0%, #323232 10%, #2c2c2c 62%, #111111 100%);
+                padding: 0 30px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: white;
+                font-weight: bold;
+                font-size: 15px;
+                border: none;
+                animation: gradientAnimation 2s ease-in-out infinite;
+                background-size: 200% 200%;
+              }
+            </style>
+
+            <p class="control">
+              <a class="button is-primary custom-button" href="">
+                <span>Contact</span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <style>
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      /* Adjust the z-index as needed */
+    }
+
+    /* Add this CSS to remove hover color and keep text black */
+    .navbar-item:hover {
+      background-color: transparent !important;
+      /* Remove background color on hover */
+      color: black !important;
+      /* Keep text color black on hover */
+    }
+  </style>
+
+  <script>
+    function toggleProjects(event) {
+      event.preventDefault();
+      var projectsDropdown = document.getElementById('projectsDropdown');
+      projectsDropdown.style.display = projectsDropdown.style.display === 'none' ? 'block' : 'none';
+    }
+
+    // Get all the navbar-burger elements
+    const navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    // Add a click event listener to each of them
+    navbarBurgers.forEach(function (el) {
+      el.addEventListener('click', function () {
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  </script>
+
+
+
+
+  <!--
+  <section id="firstsec" class="hero is-success" style="background-color: white;">
+
+
+    <div class="hero-body">
+      <div class="container has-text-centered" style="max-width: 2000px;">
+
+        <p class="title" style="margin-bottom: 35px; color: rgb(51, 51, 51);">
+          Let's transform your ideas into reality.
+        </p>
+
+        <p class="subtitle" style="font-size: 15px; color: black;">
+          Reu the developer is here 😎, Unveiling his Passion for Technology and Design.
+        </p>
+
+        <div class="tile is-ancestor">
+          <div class="tile is-4 is-vertical is-parent">
+            <div class="tile is-child box">
+              <p class="title">One</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+            </div>
+            <div class="tile is-child box">
+              <p class="title">Two</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <div class="tile is-child box">
+              <p class="title">Three</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
+              <p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at volutpat tortor.</p>
+              <p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus dolor consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras ullamcorper a nunc ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non semper leo.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+  -->
+
+  <section class="hero" style="background-color: rgb(47, 48, 47);">
+
+    <div style="font-size: 12px; padding: 14px;" class="hero">
+      <div class="container has-text-centered" style="max-width: 1000px;">
+
+        <p style="color: white; ">
+          <span>Building & Creating Ui-Friendly Websites. </span>
+          <a href="https://github.com/uriruru" target="_blank"><span
+              style="text-decoration: underline; color: white;">GITHUB</span></a>
+        </p>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!--Section One-->
+  <style>
+    /* Define the bubble background */
+    .bubble-background {
+      filter: blur(20px);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.4) 10%, transparent 20%),
+        radial-gradient(circle at 80% 90%, rgba(255, 255, 255, 0.4) 10%, transparent 20%);
+      background-size: 40px 40px;
+      pointer-events: none;
+      /* Ensures bubbles don't interfere with content */
+    }
+
+    /* Style the bubbles */
+    .bubble {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      /* background-color: rgba(74, 222, 113, 0.8);*/
+      /* Blue color with transparency */
+      border-radius: 50%;
+      pointer-events: none;
+      /* Ensures bubbles don't interfere with content */
+    }
+  </style>
+  <section id="firstsec" class="hero is-success" style="background-color: white; position: relative;">
+    <!-- Bubble background -->
+    <div class="bubble-background">
+      <!-- Bubbles -->
+      <div class="bubble" style="background-color: rgba(138, 237, 214, 0.8); top: 10%; left: 20%;"></div>
+      <div class="bubble" style="background-color: rgba(176, 242, 155, 0.8); top: 30%; left: 70%;"></div>
+      <!-- Add more bubbles as needed -->
+    </div>
+
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+      <div class="container has-text-centered" style="max-width: 2000px;">
+        <style>
+          .title {
+            font-size: clamp(2.5rem, 4vw, 5rem);
+            font-weight: bold;
+            text-align: center;
+          }
+
+          .subtitle {
+            font-size: 18px;
+            text-align: center;
+          }
+
+          @media (max-width: 767px) {
+
+            .title,
+            .subtitle {
+              text-align: left;
+            }
+          }
+        </style>
+
+        <p class="title" style="margin-bottom: 35px; color: rgb(51, 51, 51);">
+          Let's <span style="color: #1364b6;">transform</span> your <span style="color: #54ced7;">ideas</span> into
+          <span style="color: slateblue;">reality</span>.
+        </p>
+
+        <p class="subtitle" style="font-size: 15px; color: black;">
+          A 23-year-old <span style="font-weight: 600;">Frontend Developer</span> based in Calabarzon, Philippines.
+        </p>
+
+        <!--PROEJECTS, EXP, yOUTBE sUBS, yOUTUBE-->
+        <div class="container" style="max-width: 800px; margin-top: 30px;">
+          <div class="columns is-multiline is-mobile" style="text-align: left;">
+            <div class="column is-half-mobile is-one-quarter-desktop" style="padding: 3px;">
+              <div class="box" id="boxxx"
+                style="font-size: clamp(16px, 2.5vw, 23px); font-weight: bold; background-color: white;">
+                <span
+                  style="-webkit-text-stroke: #000; background: linear-gradient(to right, #1364b6, #3de8f4);-webkit-background-clip: text; -webkit-text-fill-color: transparent;">3
+                  projects</span>
+                <p style="font-size: 12px;">Personal Projects</p>
+              </div>
+            </div>
+            <div class="column is-half-mobile is-one-quarter-desktop" style="padding: 3px;">
+              <div class="box" id="boxxx"
+                style="font-size: clamp(16px, 2.5vw, 23px); font-weight: bold; background-color: white;">
+                <span
+                  style="background: linear-gradient(to right, #1364b6, #3de8f4);-webkit-background-clip: text; -webkit-text-fill-color: transparent;">2
+                  YearsExp</span>
+                <p style="font-size: 12px;">Coding / Designing</p>
+              </div>
+            </div>
+            <div class="column is-half-mobile is-one-quarter-desktop" style="padding: 3px;">
+              <div class="box" id="boxxx"
+                style="font-size: clamp(16px, 2.5vw, 23px); font-weight: bold; background-color: white;">
+                <span
+                  style="background: linear-gradient(to right, #1364b6, #3de8f4);-webkit-background-clip: text; -webkit-text-fill-color: transparent;">0
+                  Clients</span>
+                <p style="font-size: 12px;">Freelance Projects</p>
+              </div>
+            </div>
+            <div class="column is-half-mobile is-one-quarter-desktop" style="padding: 3px;">
+              <div class="box" id="boxxx"
+                style="font-size: clamp(16px, 2.5vw, 23px); font-weight: bold; background-color: white;">
+                <span
+                  style="background: linear-gradient(to right, #1364b6, #3de8f4);-webkit-background-clip: text; -webkit-text-fill-color: transparent;">39K
+                  Views</span>
+                <p style="font-size: 12px;">Youtube Audience</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+  <section class="hero" style="margin-top: -40px;">
+    <div class="hero-body">
+      <div class="container has-text-centered" style="font-size: 18px;">
+
+        <div style="margin-top: -20px;">
+
+          <!--
+            <button style="color: white; border-radius: 3px; background-color: #066ed7; border: none; padding: 10px 25px; font-size: 15px; max-width: 2000px;"> 
+              About Me
+            </button>            
+            -->
+
+          <button
+            style="font-weight: bolder; color: white; border-radius: 3px; border: none; padding: 10px 25px; font-size: 15px; 
+            max-width: 2000px; background: linear-gradient(-30deg, #202020 0%, #292929 10%, #2d2c2c 62%, #343434 100%);"
+            id="seeMoreButton" onclick="toggleText()">My Skills
+            <span id="dots"></span>
+          </button>
+
+
+          <div id="moreText" style="display: none; opacity: 0; transition: opacity 0.5s ease-in-out;">
+
+            <div class="columns is-centered" style="margin-top: 10px; gap: 10px;">
+              <div class="column is-8-desktop mystic-class-name">
+
+                <script type="module" src="https://unpkg.com/rough-notation?module"></script>
+                <script type="module" src="index.js"></script>
+
+                <strong
+                  style="color: black; margin-top: 25px; margin-bottom: 15px; line-height: 45px; text-align: left; float: left; font-size: 45px; font-family: sans-serif;">
+                  Hello! I'm Reu James, a developer based in Philippines.</strong><br><br>
+                <p style="color: black; font-family: sans-serif; font-size: 16px; text-align: left;">I was a Student at
+                  <a style="font-weight: bolder;" target="_blank"
+                    href="https://www.google.com.ph/search?q=adventist+university+of+the+philippines&client=safari&channel=iphone_bm&sxsrf=APwXEdfLqIe5YtiYluTgYZBroGptFBG64Q%3A1687433406188&source=hp&ei=vjCUZKnxCOeb2roP66uH2Ag&iflsig=AOEireoAAAAAZJQ-zvI7SYMertc2xWd-pYu-LOQmYfsJ&gs_ssp=eJzj4tTP1TcwyTAzKzZg9FJPTClLzSvJLC5RKM3LLEstKs4sqVTIT1MoyUhVKMjIzMksKMjMSy0GAMn1Eps&oq=ad&gs_lcp=Cgdnd3Mtd2l6EAMYADIHCC4QigUQJzIHCCMQigUQJzILCAAQgAQQsQMQgwEyDQguEIoFELEDEIMBEEMyCwgAEIAEELEDEIMBMggIABCABBCxAzILCAAQgAQQsQMQgwEyBQgAEIAEMggIABCABBCxAzILCAAQgAQQsQMQgwE6BAgjECc6BwguEIoFEEM6BwgAEIoFEEM6EQguEIAEELEDEIMBEMcBENEDUABYuwRg0A5oAHAAeACAAbkBiAG_ApIBAzAuMpgBAKABAQ&sclient=gws-wiz">
+                    <span class="aup">Adventist University of the Philippines</span></a> where i spent my College years
+                  learning Front-End & Backend Development.
+                  I am a very passionate developer with years of experience
+                  in developing fully responsive Websites, functional Websites, and user-friendly websites.
+
+                  <style>
+                    .aup {
+                      font-weight: bolder;
+                    }
+
+                    .aup:hover {
+                      color: rgb(215, 215, 215);
+                    }
+                  </style>
+
+                  <br><br>
+                  My focus is to create visually appealing and intuitive websites that provide a seamless user
+                  experience.
+                </p>
+
+
+                <br>
+                <br>
+
+              </div>
+
+
+              <div class="column is-3-desktop mystic-class-name">
+                <img src="/images/hacker hoodie.jpg" alt="">
+              </div>
+            </div>
+
+            <hr>
+
+            <!--Another column for skills-->
+
+            <br>
+
+            <div>
+              <strong style="padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Tech Stacks</strong>
+            </div>
+
+            <br>
+
+            <div class="columns is-centered" style="margin-top: 10px; gap: 10px;">
+
+              <div style="text-align: left;" class="column is-3-desktop mystic-class-name">
+                <Strong>FRONTEND DEVELOPMENT</Strong>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">HTML5 /
+                  CSS3</li>
+                <hr>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+                  Javascript</li>
+                <hr>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Git &
+                  Github
+                </li>
+                <hr>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Basic
+                  GIT</li>
+              </div>
+
+              <div style="text-align: left;" class="column is-3-desktop mystic-class-name">
+                <Strong>FRAMEWORKS</Strong>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+                  Bootstrap</li>
+                <hr>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Basic
+                  React</li>
+                <hr>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Bulma
+                </li>
+              </div>
+
+              <div style="text-align: left;" class="column is-3-desktop mystic-class-name">
+                <Strong>BACKEND Development</Strong>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Core
+                  Java</li>
+                <hr>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Basic
+                  Python</li>
+                <hr>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">PHP
+                </li>
+                <hr>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Jquery
+                </li>
+                <hr>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">MySQL
+                </li>
+              </div>
+
+              <div style="text-align: left;" class="column is-3-desktop mystic-class-name">
+                <Strong>DESIGNING</Strong>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+                  Responsive Web Design</li>
+                <hr>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Ui
+                  Design</li>
+                <hr>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+                  Wordpress</li>
+                <hr>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Ux
+                  Design (Basics)</li>
+              </div>
+
+            </div>
+
+            <br>
+            <hr>
+            <br>
+
+            <div>
+              <strong style="padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">SKILLSET</strong>
+            </div><br>
+
+            <div class="columns is-centered" style="margin-top: 10px; gap: 10px;">
+
+              <div style="text-align: left;" class="column is-3-desktop mystic-class-name">
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+                  Programming</li>
+                <br>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+                  Website development</li>
+                <br>
+              </div>
+
+              <div style="text-align: left;" class="column is-3-desktop mystic-class-name">
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+                  Videography</li>
+                <br>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+                  Video Editing</li>
+                <br>
+              </div>
+
+              <div style="text-align: left;" class="column is-3-desktop mystic-class-name">
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Web
+                  Design</li>
+                <br>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Drone
+                  Piloting</li>
+                <br>
+              </div>
+
+              <div style="text-align: left;" class="column is-3-desktop mystic-class-name">
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Musical
+                  Performance (Guitar)</li>
+                <br>
+                <li style="border: 1px black solid; padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">Music
+                  Recording</li>
+                <br>
+              </div>
+
+            </div>
+
+            <hr>
+
+            <!-- Another Section to for
+
+            <div>
+              <strong style="padding: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">SKILLS</strong>
+            </div><br>
+
+            <div class="columns is-centered" style="margin-top: 10px; gap: 10px;">
+
+              <div class="column is-3-desktop mystic-class-name">
+                <Strong>FRONTEND DEVELOPMENT</Strong>
+
+              </div>
+
+            </div>
+
+            -->
+
+          </div>
+
+          <!-- Add CONTENT HERE -->
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleText() {
+      var moreText = document.getElementById("moreText");
+      var button = document.getElementById("seeMoreButton");
+
+      if (moreText.style.display === "none") {
+        moreText.style.display = "block";
+        setTimeout(function () {
+          moreText.style.opacity = "1";
+        }, 10);
+        button.innerHTML = "Back";
+      } else {
+        moreText.style.opacity = "0";
+        setTimeout(function () {
+          moreText.style.display = "none";
+        }, 500);
+        button.innerHTML = "My Skills";
+      }
+    }
+  </script>
+
+
+
+  <!-- 2nd Section for carousel only -->
+
+
+  <section class="hero" style="background-color: white; margin-top: -10px;">
+    <div class="hero-body">
+      <div class="container" style="text-align: center; max-width: 2000px;">
+
+
+
+        <p class="title" style="color: black;">Pursuing Artistic Proficiency
+          <br> <span id="changingText" class="changing" style="color: #aeb45d;">Programming</span>
+        </p>
+
+        <style>
+          .changing {
+            position: relative;
+            display: inline-block;
+          }
+
+          @keyframes fadeOut {
+            0% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+
+            50% {
+              opacity: 0;
+              transform: translateY(-20px);
+            }
+
+            100% {
+              opacity: 0;
+              transform: translateY(-20px);
+            }
+          }
+
+          @keyframes fadeIn {
+            0% {
+              opacity: 0;
+              transform: translateY(20px);
+            }
+
+            50% {
+              opacity: 0;
+              transform: translateY(20px);
+            }
+
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        </style>
+
+        <script>
+          const words = ["Designing", "Video Editing", "Drone Piloting", "Videography", "Programming"];
+          let currentWordIndex = 0;
+          const changingText = document.getElementById("changingText");
+
+          function changeWord() {
+            changingText.classList.remove("changing");
+
+            setTimeout(() => {
+              changingText.style.animation = "fadeOut 0.5s ease-in-out forwards";
+
+              setTimeout(() => {
+                changingText.textContent = words[currentWordIndex];
+                changingText.style.animation = "fadeIn 0.5s ease-in-out forwards";
+
+                currentWordIndex++;
+                if (currentWordIndex === words.length) {
+                  currentWordIndex = 0;
+                }
+              }, 500); // Wait for the fadeOut animation to complete (adjust this value accordingly)
+            }, 2000); // Wait before starting the animation (adjust this value accordingly)
+          }
+
+          // Change the word every 4 seconds (4000 milliseconds)
+          setInterval(changeWord, 4000);
+        </script>
+        <br>
+
+
+        <div class="columns is-desktop">
+
+          <div class="carousel-container">
+            <div class="carousel-slide">
+              <img src="/images/programmerPic.JPEG" alt="">
+              <img src="/images/MusicianPic.JPEG" alt="">
+              <img src="/images/DesingerPic.JPEG" alt="">
+              <img src="/images/VideoEditorpIC.JPEG" alt="">
+              <img src="/images/VideographerPic.JPEG" alt="">
+              <img src="/images/Dronepilot Pic.JPEG" alt="">
+            </div>
+          </div>
+
+
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+          <script>
+            $(document).ready(function () {
+              $('.carousel-slide').slick({
+                infinite: true,
+                speed: 5000, // set the speed of the carousel animation
+                autoplay: true, // enable autoplay
+                autoplaySpeed: 0, // set autoplay speed to 0 to enable custom scrolling
+                cssEase: 'linear', // set the easing effect of the carousel animation
+                slidesToShow: 4,
+                responsive: [
+                  {
+                    breakpoint: 968,
+                    settings: {
+                      slidesToShow: 2
+                    }
+                  }
+                ]
+              });
+
+              // set the custom autoplay scroll function
+              $('.carousel-slide').on('setPosition', function () {
+                var $slideContainer = $(this).find('.slick-slide');
+
+                function scrollImages() {
+                  // get the current slide offset
+                  var slideOffset = $('.carousel-slide').offset().left - $('.carousel-container').offset().left;
+
+                  // animate the slide container to move to the next slide
+                  $slideContainer.animate({ 'left': -slideOffset }, 2000, 'linear', function () {
+                    // after the animation is complete, move the first slide to the end
+                    $('.carousel-slide').slick('slickNext');
+                  });
+                }
+
+                // start the custom autoplay cycle
+                scrollImages();
+
+                // pause the custom autoplay when hovering over the carousel
+                $('.carousel-container').mouseenter(function () {
+                  $slideContainer.stop();
+                }).mouseleave(function () {
+                  scrollImages();
+                });
+              });
+            });
+          </script>
+
+
+          <style>
+            .carousel-container {
+              overflow: hidden;
+              width: 100%;
+              /* Set the width of the carousel to fill its container */
+              margin: 0 auto;
+              /* Center the carousel horizontally */
+            }
+
+            .carousel-slide {
+              width: 75%;
+              /* Set the width of the slides to fill the carousel */
+            }
+
+            @media (max-width: 768px) {
+              .carousel-slide {
+                width: 120%;
+              }
+            }
+
+            .carousel-slide img {
+              width: 100%;
+              /* Set the width of the images to fill their container */
+              margin-right: 10px;
+              /* Add a margin of 10 pixels to the right of each image */
+            }
+
+            .slick-prev,
+            .slick-next {
+              display: none !important;
+            }
+          </style>
+
+        </div>
+
+
+      </div>
+  </section>
+
+
+
+
+  <section class="hero">
+
+    <div class="hero-body">
+      <div class="container has-text-centered" style="max-width: 800px;">
+
+        <!-- <p class="title" style="color: black;"></p> -->
+
+        <style>
+          .is-divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 20px 0;
+          }
+
+          .is-divider:before,
+          .is-divider:after {
+            content: "";
+            flex-grow: 1;
+            background-color: #000;
+            height: 1px;
+            margin: 0 30px;
+          }
+
+          .divider-text {
+            color: rgb(104, 106, 106);
+            font-size: 18px;
+            font-weight: bolder;
+          }
+
+          @media (max-width: 767px) {
+            .divider-text {
+              font-size: 18px;
+            }
+          }
+        </style>
+
+        <div class="is-divider">
+          <span class="divider-text">Recent Projects</span>
+        </div>
+
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="hero" style="background-color: white; margin-top: -100px;">
+    <div class="hero-body">
+      <div class="container has-text-centered" style="max-width: 2000px;">
+
+        <!-- <p style="color: black; font-size: 18px; font-weight: bold;">SOME OF MY LATEST WORKS</p> -->
+
+        <ul class="video-sec-middle" id="vid-grid">
+          <li class="thumb-wrap"><a href="">
+              <img class="thumb" src="/images/backend.png" alt="">
+              <div class="thumb-info">
+                <p class="thumb-text" style="color: black; padding: 2px;">Frontend Projects</p>
+                <p class="thumb-user">Username</p>
+              </div>
+            </a></li>
+          <li class="thumb-wrap"><a href="">
+              <img class="thumb" src="/images/front.png" alt="">
+              <div class="thumb-info">
+                <p class="thumb-text" style="color: black; padding: 2px;">Backend Projects</p>
+                <p class="thumb-user">Username</p>
+              </div>
+            </a></li>
+          <li class="thumb-wrap"><a href="">
+              <img class="thumb" src="/images/UiU:Designs.png" alt="">
+              <div class="thumb-info">
+                <p class="thumb-text" style="color: black; padding: 2px;">Ui/Ux Designs</p>
+                <p class="thumb-user">Username</p>
+              </div>
+            </a></li>
+        </ul>
+
+      </div>
+
+      <!--
+      <div style="margin-top: -15px; text-align: center;">
+        <button class="buttonarrow"
+          style="background-color: white; color: #595959; padding: 10px 20px; border: none; border-radius: 3px; font-size: 17px;">VIEW
+          PROJECTS <span class="arrow1">➝</span></button>
+
+        <style>
+          .buttonarrow {
+            transition: 0.5s ease;
+            text-decoration: underline;
+          }
+
+          .buttonarrow:hover {
+            margin-right: 20px;
+            transition: 0.5s ease;
+          }
+        </style>
+
+      </div>-->
+
+    </div>
+
+    <style>
+      .video-sec-wrap {
+        width: 100%;
+        min-height: auto;
+      }
+
+      .video-sec {
+        width: 85%;
+        margin: 3em auto;
+        border-bottom: 2px solid #353535;
+        text-align: left;
+      }
+
+      .video-sec-middle {
+        margin-top: -10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        grid-gap: 15px;
+        padding: 20px 0;
+      }
+
+      .thumb-wrap {
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+      }
+
+      .thumb {
+        display: block;
+        margin: 0.1em;
+        width: 100%;
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        opacity: 1;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .thumb:hover {
+        filter: saturate(1);
+        opacity: 0.8;
+        box-shadow: 0 5px 10px 0 rgba(186, 185, 185, 0.5);
+      }
+
+      .thumb-info {
+        display: inline-block;
+        height: auto;
+        width: 100%;
+        padding: 0.4em;
+        text-align: left;
+      }
+
+      .thumb-title {
+        color: #f5f5f5;
+        margin: 0;
+        font-size: 1.2em;
+      }
+
+      .thumb-user {
+        color: #7e7e7e;
+        display: block;
+        margin: 0;
+        font-size: 0.9em;
+      }
+
+      .thumb-text {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display: inline-block;
+        margin: 0;
+        font-size: 0.9em;
+      }
+
+      .video-sec-title {
+        font-weight: bolder;
+        font-size: 1.4em;
+        color: #f5f5f5;
+        margin: 5px 0 10px 10px;
+      }
+
+      .video-showmore {
+        font-weight: bold;
+        font-variant: all-petite-caps;
+        display: none;
+        color: #7e7e7e;
+        padding: 10px;
+        font-size: 1.2em;
+      }
+
+      @media only screen and (max-width: 756px) {
+        .video-sec-middle {
+          grid-template-columns: 2fr 2fr;
+        }
+      }
+    </style>
+  </section>
+
+  <!-- incase you need another box div
+  <section style="margin-top: -140px;" class="hero is-medium">
+    <div class="hero-body">
+      <div class="container" style="max-width: 2000px; margin-top: 30px;">
+
+        <div class="tile is-ancestor">
+          <div class="tile is-4 is-vertical is-parent">
+            <div style="background-color: #c0e686;" class="tile is-child box">
+              <p class="title">One</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque
+                tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+            </div>
+            <div class="tile is-child box">
+              <p class="title">Two</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque
+                tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <div id="bigimg" class="tile is-child box">
+              <p style="color: white; text-align: left;" class="title">
+                <span>Github</span>
+              </p>
+              <style>
+                #bigimg {
+                  background-image: url(/images/front.png);
+                }
+              </style>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section> -->
+
+  <section class="hero" style="background-color: white; margin-top: -30px;">
+    <div class="hero-body">
+      <div class="container has-text-centered" style="max-width: 2000px;">
+        <p class="title" style="font-size: 55px; color: rgb(105, 105, 105);">
+          <span style="color: black;">Help is here.</span> Whenever and however you need it.
+        </p>
+        <br>
+
+        <div class="columns is-centered" style="gap: 10px;">
+          <div class="column is-3-desktop image-container">
+            <strong style="float: left; color: black;">Need Technical help?</strong><br>
+            <p style="font-size: 15px; color: rgb(86, 86, 87); text-align: left;">Ask a Specialist</p>
+            <p style="text-align: left; color: black;">Developer | Designer</p>
+            <img src="/images/edit1.png" alt="">
+          </div>
+
+          <hr>
+
+          <div class="column is-3-desktop image-container" style="border: none; background-color: black;">
+            <p style="color: rgb(202, 202, 202); text-align: left;">Let's work together!</p>
+            <strong
+              style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; float: left; color: white; font-size: 23px; text-align: left;"><span
+                style="color: rgb(238, 121, 18);">Service and support</span></strong>
+
+            <p style="margin-top: 40px; color: white; text-align: left;">Coding</p>
+
+            <br>
+            <br>
+
+            <div class="container nobackwhite" style="max-width: 800px; margin-top: 30px;">
+              <div class="columns is-multiline is-mobile nobackwhite" style="text-align: center;">
+
+
+                <div class="column is-full-mobile is-three-quarter-desktop nobackwhite"
+                  style="padding: 3px; margin-top: -50px;">
+                  <div class="box nobackwhite" id="boxxx"
+                    style="background-color: black; font-size: clamp(16px, 2.5vw, 23px); font-weight: bold;">
+                    <style>
+                      .lottie-container {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: auto;
+                        max-width: 800px;
+                        margin: 0 auto;
+                        /* Centers the container horizontally */
+                      }
+                    </style>
+
+                    <div class="lottie-container">
+                      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                      <lottie-player src="https://assets1.lottiefiles.com/private_files/lf30_7ktgdzfj.json"
+                        background="transparent" speed="1" style="margin-top: 20px; width: 100%; height: 100%;" loop
+                        autoplay></lottie-player>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+
+          </div>
+          <style>
+            .image-container {
+              border: 1px solid white;
+              border-radius: 8px;
+              box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+              transition: border-width 0.3s, box-shadow 0.3s;
+              transition: 0.6s ease;
+            }
+
+            .image-container img {
+              width: 100%;
+              height: auto;
+              margin: 0 auto;
+              /* Remove mo itong margin-bottom at margin, ito kasi yung nag pa responsive sa image mo sa box para maibaba mo img e */
+              margin-bottom: -20px;
+            }
+
+            .image-container:hover {
+              transition: 0.6s ease;
+              box-shadow: 0 24px 44px rgba(0, 0, 0, 0.3);
+            }
+          </style>
+
+          <!--
+            <div class="column is-3-desktop image-container" style="background: linear-gradient(-30deg, #8accd6 0%, #93d2d1 10%, #e2cdb8 62%, #fe7333 100%);">
+              <p style="font-size: 18px; color: rgb(249, 249, 252); text-align: left;">Get in touch with me via social media.</p>
+
+              <br>
+
+              
+              <div class="MySocialszz columns is-multiline is-mobile" style="text-align: left;">
+
+                <div class="MySocialszz column is-full-desktop is-three-quarter-desktop" style="padding: 10px;">
+                  <div class="MySocialszz box" id="MySocialszz-boxxx" style="font-size: clamp(16px, 2.5vw, 23px); font-weight: bold; background-color: white;">
+                    <span style="background: linear-gradient(to right, #1364b6, #3de8f4);-webkit-background-clip: text; -webkit-text-fill-color: transparent;">FACEBOOK</span>
+                    <p style="font-size: 12px;">REU JAMES</p>
+                  </div>
+                </div>
+
+                <div class="MySocialszz column is-full-desktop is-three-quarter-desktop" style="padding: 10px;">
+                  <div class="MySocialszz box" id="MySocialszz-boxxx" style="font-size: clamp(16px, 2.5vw, 23px); font-weight: bold; background-color: white;">
+                    <span style="color: rgb(252, 96, 96);">YOUTUBE</span>
+                    <p style="font-size: 12px;">GWEAIN</p>
+                  </div>
+                </div>
+                
+                <div class="MySocialszz column is-full-desktop is-three-quarter-desktop" style="padding: 10px;">
+                  <div class="MySocialszz box" id="MySocialszz-boxxx" style="font-size: clamp(16px, 2.5vw, 23px); font-weight: bold; background-color: rgb(47, 47, 47);">
+                    <span style="background: linear-gradient(to right, #848383, #c3c3c3);-webkit-background-clip: text; -webkit-text-fill-color: transparent;">GITHUB</span>
+                    <p style="font-size: 12px; color: white;">Uriruru</p>
+                  </div>
+                </div>
+
+
+
+              </div>
+              
+
+            </div>
+            -->
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-white">
+    <div class="hero-body">
+
+      <!--
+      <p style="text-align: left; text-decoration: underline; text-underline-offset: 8px;">VISUAL SHOWCASE</p>-->
+
+      <div class="container" style="max-width: 2000px; margin-top: 30px;">
+
+        <!---->
+        <p class="title" style="font-size: 55px; color: rgb(105, 105, 105);">
+          <span style="color: rgb(31, 31, 31);">Suggested for you.</span> Technical Skills showcase.
+        </p>
+
+        <br>
+
+        <div class="columns is-multiline is-desktop" style="text-align: left;">
+          <div class="column is-two-quarter-mobile" style="padding: 3px;">
+            <video muted controls loop src="/websiteVideos/CODING.mp4"></video>
+            <p
+              style="font-family: Verdana, Geneva, Tahoma, sans-serif; padding: 5px 10px; border-radius: 5px; background-color: white; color: black;">
+              Programming <span class="arrow1">➝</span></p>
+          </div>
+
+          <hr>
+
+          <div class="column is-two-quarter-mobile" style="padding: 3px;">
+            <video muted controls loop poster="/images/375754299_1070112397321065_6972201974482485451_n.jpg"
+              src="/websiteVideos/Video Edits.mp4"></video>
+            <p
+              style="font-family: Verdana, Geneva, Tahoma, sans-serif; padding: 5px 10px; border-radius: 5px; background-color: white; color: black;">
+              Video Editing <span class="arrow1">➝</span></p>
+            <p></p>
+          </div>
+
+          <hr>
+
+          <div class="column is-two-quarter-mobile" style="padding: 3px;">
+            <video muted controls loop src="/websiteVideos/Drone  Flight Test_1.mp4"></video>
+            <p
+              style="font-family: Verdana, Geneva, Tahoma, sans-serif; padding: 5px 10px; border-radius: 5px; background-color: white; color: black;">
+              Drone Piloting <span class="arrow1">➝</span></p>
+          </div>
+        </div>
+
+        <!-- button ito 
+        <div style="margin-top: 25px; text-align: center;">
+          <button class="buttonarroww"
+            style="background-color: black; color: white; padding: 10px 20px; border: white 1px solid; border-radius: 3px; font-size: 17px;">More Videos <span class="arrow1">➝</span></button>
+
+          <style>
+            .buttonarroww {
+              transition: 0.5s ease;
+            }
+
+            .buttonarroww:hover {
+              margin-right: 20px;
+              transition: 0.5s ease;
+            }
+          </style>
+
+        </div>
+        -->
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Testimonials 
+
+    <section style="background-color: #303131;" class="hero is-large is-white">
+      <div class="hero-body">
+        <div class="container" style="max-width: 2000px; margin-top: 30px;">
+  
+  
+  
+        </div>
+      </div>
+    </section>
+  
+    Ending -->
+
+
+  <!--New Section here
+
+  <section class="hero is-primary" style="background-color: #ffffff;">
+
+
+    <div class="hero-body">
+      <div class="container has-text-left">
+
+        <strong style="color: #747474; font-size: 40px; line-height: 32px;">Frontend Web Developer</strong>
+
+        <P style="text-align: left; color: #3a3a3a; margin-top: 15px;">My journey with Web Development began with a
+          curiosity
+          for how websites were built. I started with basic HTML and CSS, and struggled to grasp
+          some of the more complex concepts at first. However, I remained determined and continued
+          to learn and experiment, gradually picking up new skills along the way. I was fortunate
+          to have access to numerous online resources and mentors who helped me overcome obstacles
+          and grow as a Front End Developer. With each project, I learned something new and became
+          more confident in my ability to create websites that were both visually appealing and
+          functional. While I still have much to learn, I am grateful for the progress I have made
+          and am excited to continue improving my skills.</P>
+
+        <br>
+        <br>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0-beta2/css/all.css"
+          integrity="sha384-..." crossorigin="anonymous">
+
+
+        <strong style="color: #747474; font-size: 23px;">Follow Reu James on:</strong>
+        <br>
+
+        <div class="container" style="max-width: 800px; margin-top: 30px; float: left;">
+          <div class="columns is-multiline is-mobile" style="text-align: left;">
+          
+            <div class="column is-half-mobile is-one-quarter-desktop" style="padding: 3px;">
+              <div class="box" id="boxxx"
+                style="font-size: clamp(16px, 2.5vw, 23px); font-weight: bold; background-color: white;">
+                <a style="background: linear-gradient(to right, #1364b6, #3de8f4);-webkit-background-clip: text; -webkit-text-fill-color: transparent;"
+                  href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                <p style="font-size: 13px;">Facebook</p>
+              </div>
+            </div>
+
+            <div class="column is-half-mobile is-one-quarter-desktop" style="padding: 3px;">
+              <div class="box" id="boxxx"
+                style="font-size: clamp(16px, 2.5vw, 23px); font-weight: bold; background-color: white;">
+                <a style="background: linear-gradient(to right, #b61313, #f4523d);-webkit-background-clip: text; -webkit-text-fill-color: transparent;"
+                  href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                <p style="font-size: 13px;">Youtube</p>
+              </div>
+            </div>
+
+            <div class="column is-half-mobile is-one-quarter-desktop" style="padding: 3px;">
+              <div class="box" id="boxxx"
+                style="font-size: clamp(16px, 2.5vw, 23px); font-weight: bold; background-color: white;">
+                <a style="background: linear-gradient(to right, #b61388, #c93df4);-webkit-background-clip: text; -webkit-text-fill-color: transparent;"
+                  href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <p style="font-size: 13px;">Instagram</p>
+              </div>
+            </div>
+
+            <div class="column is-half-mobile is-one-quarter-desktop" style="padding: 3px;">
+              <div class="box" id="boxxx"
+                style="font-size: clamp(16px, 2.5vw, 23px); font-weight: bold; background-color: white;">
+                <a style="background: linear-gradient(to right, #5690ca, #3de8f4);-webkit-background-clip: text; -webkit-text-fill-color: transparent;"
+                  href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+                <p style="font-size: 13px;">LinkedIn</p>
+              </div>
+            </div>
+
+            <div class="column is-half-mobile is-one-quarter-desktop" style="padding: 3px;">
+              <div class="box" id="boxxx"
+                style="font-size: clamp(16px, 2.5vw, 23px); font-weight: bold; background-color: white;">
+                <a style="background: linear-gradient(to right, #1364b6, #3de8f4);-webkit-background-clip: text; -webkit-text-fill-color: transparent;"
+                  href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                <p style="font-size: 13px;">Twitter</p>
+              </div>
+            </div>
+
+            <div class="column is-half-mobile is-one-quarter-desktop" style="padding: 3px;">
+              <div class="box" id="boxxx"
+                style="font-size: clamp(16px, 2.5vw, 23px); font-weight: bold; background-color: white;">
+                <a style="background: linear-gradient(to right, #303131, #696969);-webkit-background-clip: text; -webkit-text-fill-color: transparent;"
+                  href="https://github.com/"><i class="fab fa-github"></i></a>
+                <p style="font-size: 13px;">Github</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>-->
+
+  <br>
+
+  <section style="background-color: #2d2c2c;" class="hero is-white">
+    <div class="hero-body">
+      <div class="container has-text-centered" style="max-width: 2000px;">
+
+        <div class="slider-container">
+          <div class="slider-track">
+
+            <div class="slide">
+              <p class="title" style="font-size: 55px; color: rgb(105, 105, 105);">
+                <span style="color: rgb(107, 116, 219);">Linkedin.</span> Junior job ready, <span
+                  style="color: #b6c472;">Hire me now</span>?
+              </p>
+            </div>
+
+            <!-- Add another div here, kasi Automatic sliding ito kaso wala me maisip na ilagay na caption kaya isa lang muna inilagay ko -->
+            <!-- hello World, learn basic fundamentals -->
+
+          </div>
+          <button style="opacity: 0;" class="prev-button button is-white">&#10094;</button>
+          <button style="opacity: 0;" class="next-button button is-white">&#10095;</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .slider-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slider-track {
+      display: flex;
+      transition: transform 1s ease-in-out;
+      /* Adjust the transition duration as needed */
+    }
+
+    .slide {
+      flex-shrink: 0;
+      width: 100%;
+    }
+
+    .slide-image {
+      width: 100%;
+      height: auto;
+    }
+
+    .prev-button,
+    .next-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 10px;
+      font-size: 20px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      cursor: pointer;
+    }
+
+    .prev-button {
+      left: 10px;
+    }
+
+    .next-button {
+      right: 10px;
+    }
+  </style>
+
+  <script>
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
+    const sliderTrack = document.querySelector('.slider-track');
+    const slides = document.querySelectorAll('.slide');
+    let slideWidth = slides[0].offsetWidth; // Adjusted to offsetWidth
+    const slideCount = slides.length;
+    let position = 0;
+
+    // Set initial position of the slider track
+    sliderTrack.style.transform = `translateX(${position}px)`;
+
+    // Slide to the previous image
+    prevButton.addEventListener('click', () => {
+      position += slideWidth;
+      position = Math.min(position, 0);
+      sliderTrack.style.transform = `translateX(${position}px)`;
+    });
+
+    // Slide to the next image
+    nextButton.addEventListener('click', () => {
+      position -= slideWidth;
+      const minPosition = -(slideWidth * (slideCount - 1));
+      position = Math.max(position, minPosition);
+      sliderTrack.style.transform = `translateX(${position}px)`;
+    });
+
+    // Adjust slide width on window resize
+    window.addEventListener('resize', () => {
+      slideWidth = slides[0].offsetWidth;
+      position = -slideWidth * (slideCount - 1);
+      sliderTrack.style.transform = `translateX(${position}px)`;
+    });
+
+    // Infinite slide with slower auto-slide
+    setInterval(() => {
+      position -= slideWidth;
+      const minPosition = -(slideWidth * (slideCount - 1));
+      if (position < minPosition) {
+        position = 0;
+      }
+      sliderTrack.style.transform = `translateX(${position}px)`;
+    }, 6000); /* Adjust the interval duration as needed */
+  </script>
+
+  <section class="hero is-primary is-medium" style="background-color: rgb(255, 255, 255);">
+
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <p style="color: #2f8cdc;" class="title">
+          Some Things I’ve Built
+        </p>
+
+        <p style="color: #000;" class="subtitle">
+          Add Your Files Here
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!--
+  <section class="hero is-black">
+    <div class="hero-body">
+
+      <div class="container" style="max-width: 2000px; margin-top: 30px;">
+        <p class="title" style="font-size: 55px; color: rgb(105, 105, 105);">
+          <span style="color: rgb(107, 116, 219);">Linkedin.</span> Hire me now.</p>
+      </div><br>
+
+      ------
+
+    </div>
+  </section> NOTE: ICHACHANGE COLOR ITONG BACKGROUND PATI TEXT COLOR-->
+
+</body>
+
+<footer style="background-color: white; padding: 25px;" class="footer">
+  <div class="content has-text-centered">
+    <p style="color: rgb(188, 187, 187);">
+      <strong style="color: rgb(44, 44, 44);">Developed & Designed</strong> by <a style="font-weight: bolder;"
+        href="">Reu
+        James</a>.
+    </p>
+  </div>
+</footer>
+
+</html>
